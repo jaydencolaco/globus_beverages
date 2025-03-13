@@ -15,7 +15,9 @@ export function Navbar() {
     <header className="sticky top-0 z-50 w-full border-b bg-background">
       <div className="container flex h-16 items-center px-4">
         <div className="flex items-center space-x-2">
-          <img
+          <Image
+            height={10}
+            width={10}
             src="/Logoblack.svg"
             alt="Globus Beverages Logo"
             className="h-8 w-8 rounded-full object-cover"
@@ -35,9 +37,11 @@ export function Navbar() {
               <div className="flex flex-col space-y-6 pt-6">
                 <div className="flex items-center space-x-2">
                   <Image
+                    height={10}
+                    width={10}
                     src="/Logoblack.svg"
                     alt="Globus Beverages Logo"
-                    className="h-8 w-8 rounded-full object-cover"
+                    className=" h-8 w-8 rounded-full object-cover"
                   />
                   <span className="text-lg font-bold">Globus Beverages</span>
                 </div>

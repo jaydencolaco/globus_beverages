@@ -10,6 +10,8 @@ export function Footer() {
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <Image
+                height={10}
+                width={10}
                 src="/Logoblack.svg"
                 alt="Globus Beverages Logo"
                 className="h-8 w-8 rounded-full object-cover"

@@ -23,10 +23,11 @@ export default function Home() {
         <section className="relative">
           <div className="absolute inset-0 z-0">
             <Image
+              height={1905}
+              width={622}
               src="/carousel2.png"
               alt="Tea plantation landscape"
-              fill
-              className="object-cover brightness-[0.7]"
+              className="w-full h-[70vh] object-cover brightness-[0.7]"
               priority
             />
           </div>
@@ -34,7 +35,7 @@ export default function Home() {
             <div className="max-w-2xl text-white">
               <h1 className="mb-6 text-4xl font-bold leading-tight sm:text-5xl md:text-6xl">
                 Premium Tea & Coffee <br />
-                <span className="text-primary">From Source to Cup</span>
+                <span className="text-white">From Source to Cup</span>
               </h1>
               <p className="mb-8 text-lg md:text-xl">
                 Global sourcing, importing, exporting, and distribution of the
@@ -343,8 +344,9 @@ export default function Home() {
                 Ready to Elevate Your Tea & Coffee Business?
               </h2>
               <p className="mb-8 text-lg">
-                Whether you`&apos;re looking to source premium products, expand your
-                distribution, or enter new markets, our team is here to help.
+                Whether you`&apos;re looking to source premium products, expand
+                your distribution, or enter new markets, our team is here to
+                help.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Button size="lg" className="font-medium">
