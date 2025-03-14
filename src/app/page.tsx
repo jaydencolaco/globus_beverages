@@ -13,6 +13,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import ContactUs from "@/components/ContactUs";
 
 export default function Home() {
   return (
@@ -385,6 +386,7 @@ export default function Home() {
           </div>
         </section>
       </main>
+      <ContactUs/>
       <Footer />
     </div>
   );

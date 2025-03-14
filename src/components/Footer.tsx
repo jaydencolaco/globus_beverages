@@ -27,7 +27,7 @@ export function Footer() {
               <span className="text-lg font-bold">Globus Beverages</span>
             </div>
             <p className="text-sm text-muted-foreground">
-              Refreshing the world with premium quality beverages since 1995.
+              Refreshing the world with premium quality beverages since 2015.
             </p>
           </div>
           {/* <div>
@@ -88,7 +88,7 @@ export function Footer() {
                   href="#"
                   className="text-muted-foreground hover:text-foreground"
                 >
-                  Sustainability
+                  Products
                 </Link>
               </li>
               <li>
@@ -96,7 +96,7 @@ export function Footer() {
                   href="#"
                   className="text-muted-foreground hover:text-foreground"
                 >
-                  Products
+                  Franchise
                 </Link>
               </li>
               <li>
