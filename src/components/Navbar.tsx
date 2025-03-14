@@ -21,11 +21,11 @@ export function Navbar() {
             src="/Logoblack.svg"
             alt="Globus Beverages Logo"
             className="h-8 w-8 rounded-full object-cover"
-          />
+          />  
           <span className="text-lg font-bold">Globus Beverages</span>
         </div>
 
-        <div className="ml-auto">
+        <div className="ml-auto flex-end">
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon" className="">

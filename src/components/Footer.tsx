@@ -1,5 +1,13 @@
 import Link from "next/link";
-import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
+import {
+  Building2,
+  Facebook,
+  House,
+  Instagram,
+  Linkedin,
+  Phone,
+  Twitter,
+} from "lucide-react";
 import Image from "next/image";
 
 export function Footer() {
@@ -22,7 +30,7 @@ export function Footer() {
               Refreshing the world with premium quality beverages since 1995.
             </p>
           </div>
-          <div>
+          {/* <div>
             <h4 className="mb-4 text-sm font-semibold uppercase tracking-wider">
               Products
             </h4>
@@ -60,10 +68,11 @@ export function Footer() {
                 </Link>
               </li>
             </ul>
-          </div>
+          </div> */}
+
           <div>
-            <h4 className="mb-4 text-sm font-semibold uppercase tracking-wider">
-              Company
+            <h4 className="mb-4 text-sm font-semibold uppercase tracking-wider flex items-center gap-2">
+              <Building2 /> Company
             </h4>
             <ul className="space-y-2 text-sm">
               <li>
@@ -87,7 +96,7 @@ export function Footer() {
                   href="#"
                   className="text-muted-foreground hover:text-foreground"
                 >
-                  Careers
+                  Products
                 </Link>
               </li>
               <li>
@@ -101,18 +110,35 @@ export function Footer() {
             </ul>
           </div>
           <div>
-            <h4 className="mb-4 text-sm font-semibold uppercase tracking-wider">
-              Contact
+            <h4 className="mb-4 text-sm font-semibold uppercase tracking-wider flex items-center gap-2">
+              <House /> Address
             </h4>
             <ul className="space-y-2 text-sm">
-              <li className="text-muted-foreground">123 Beverage Way</li>
               <li className="text-muted-foreground">
-                Refreshment City, RC 10001
+                Shop No. 3 Jenabai Valse Patel,
               </li>
               <li className="text-muted-foreground">
-                info@globusbeverages.com
+                2nd Cross Lane, Opp. Raj Masala
               </li>
-              <li className="text-muted-foreground">+1 (555) 123-4567</li>
+              <li className="text-muted-foreground">
+                Off N.M. Joshi Marg, Byculla
+              </li>
+              <li className="text-muted-foreground">Mumbai - 400027</li>
+            </ul>
+          </div>
+          <div>
+            <h4 className="mb-4 text-sm font-semibold uppercase tracking-wider flex items-center gap-2">
+              <Phone /> Contact
+            </h4>
+            <ul className="space-y-2 text-sm">
+              <a href="tel:+919819991841">
+                <li className="text-muted-foreground">+919819991841</li>
+              </a>
+              <a href="email:globusbeverages@gmail.com">
+                <li className="text-muted-foreground">
+                  globusbeverages@gmail.com
+                </li>
+              </a>
             </ul>
             <div className="mt-4 flex space-x-4">
               <Link
