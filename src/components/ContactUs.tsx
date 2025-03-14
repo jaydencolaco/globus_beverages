@@ -62,14 +62,15 @@ const ContactUs = () => {
         </div>
         <div className="p-8">
           <div className="aspect-w-16 aspect-h-9 mb-36">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3767.736233263891!2d72.8274034!3d19.2067196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b7823161eaf3%3A0x44d37da28e6cc079!2sSUPERNOVA%20LIGHTING%20INDUSTRIES!5e0!3m2!1sen!2sin!4v1735920631079!5m2!1sen!2sin"
-              width="100%"
-              height="450"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-            ></iframe>
+          <iframe
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.1186208927525!2d72.8325107!3d18.9743749!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c7ffb4cc6b45%3A0x4cd49df38e540305!2sGlobus%20Beverages-Coffee%20%26%20Tea%20Vending%20Machine%20on%20rent%20in%20Mumbai!5e0!3m2!1sen!2sin!4v1710439090674!5m2!1sen!2sin"
+  width="100%"
+  height="450"
+  style={{ border: 0 }}
+  allowFullScreen
+  loading="lazy"
+/>
+
           </div>
           <div className="grid md:grid-cols-2 gap-8 items-start">
             <div>
