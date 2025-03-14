@@ -26,7 +26,7 @@ export default function Home() {
             <Image
               height={1905}
               width={622}
-              src="/carousel2.png"
+              src="/carousel3.png"
               alt="Tea plantation landscape"
               className="w-full h-[70vh] object-cover brightness-[0.7]"
               priority
@@ -151,25 +151,25 @@ export default function Home() {
                   title: "Specialty Coffee",
                   description:
                     "Single-origin and artisanal blends from top coffee-producing regions.",
-                  image: "/placeholder.svg?height=400&width=400",
+                  image: "/lemontea.png",
                 },
                 {
                   title: "Premium Tea",
                   description:
                     "Exquisite loose leaf teas including black, green, oolong, and white varieties.",
-                  image: "/placeholder.svg?height=400&width=400",
+                  image: "/swanesh.jpg",
                 },
                 {
                   title: "Herbal Infusions",
                   description:
                     "Caffeine-free blends crafted from herbs, fruits, and botanicals.",
-                  image: "/placeholder.svg?height=400&width=400",
+                  image: "/continental.jpg",
                 },
                 {
                   title: "Organic Selection",
                   description:
                     "Certified organic products meeting the highest quality standards.",
-                  image: "/placeholder.svg?height=400&width=400",
+                  image: "/soceitytea.jpg",
                 },
               ].map((product, index) => (
                 <div
@@ -281,7 +281,7 @@ export default function Home() {
             <div className="grid gap-8 md:grid-cols-2">
               <div className="relative h-[400px] overflow-hidden rounded-lg border shadow-sm">
                 <Image
-                  src="/placeholder.svg?height=800&width=800"
+                  src="/soceitytea.jpg"
                   alt="World map showing our global operations"
                   fill
                   className="object-cover"
@@ -354,10 +354,11 @@ export default function Home() {
         <section className="relative py-16 md:py-24">
           <div className="absolute inset-0 z-0">
             <Image
-              src="/placeholder.svg?height=600&width=1920"
+              src="/carousel.png"
+              width={600}
+              height={600}
               alt="Coffee beans background"
-              fill
-              className="object-cover brightness-[0.4]"
+              className="object-cover brightness-[0.4] w-full "
             />
           </div>
           <div className="container relative z-10 mx-auto px-4">

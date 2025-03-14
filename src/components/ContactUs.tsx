@@ -3,11 +3,8 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Navbar } from "@/components/Navbar";
-import { Footer } from "@/components/Footer";
 import axios from "axios";
 import { toast } from "sonner";
-import { Toaster } from "@/components/ui/sonner";
 import { Label } from "@/components/ui/label";
 import { Loader2 } from "lucide-react";
 
@@ -133,7 +130,10 @@ const ContactUs = () => {
                   />
                 </div>
                 {isLoading ? (
-                  <Button type="submit" className="bg-black text-white border hover:border-b-black hover:text-black">
+                  <Button
+                    type="submit"
+                    className="bg-black text-white border hover:border-b-black hover:text-black"
+                  >
                     <Loader2 className="animate-spin" />
                     Send Message
                   </Button>
@@ -154,10 +154,11 @@ const ContactUs = () => {
                 </p>
                 {/* <br /> */}
                 <p className=" text-gray-500">
-                  Supernova Lighting Industries,
-                  <br /> Plot No. 9/B, Government Industrial Estate,
-                  <br /> Charkop, Kandivali (W),
-                  <br /> Mumbai – 400067
+                  Shop No. 3 Jenabai Valse Patel,
+                  <br /> 2nd Cross Lane, Opp. Raj Masala
+                  <br />
+                  Off N.M. Joshi Marg, Byculla
+                  <br /> Mumbai - 400027
                 </p>
                 <p className="pt-3  font-light tracking-widest">
                   <strong>Branch Office:</strong>
