@@ -13,7 +13,7 @@ export function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background">
-      <div className="container flex h-16 items-center px-4 justify-between w-full">
+      <div className=" flex h-16 items-center px-4 justify-between w-full">
         {/* Logo on the left */}
         <div className="flex items-center space-x-2">
           <Image
@@ -36,7 +36,7 @@ export function Navbar() {
           </SheetTrigger>
           <SheetContent side="left" className="w-[80%] sm:w-[350px]">
             <div className="flex flex-col space-y-6 pt-6">
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center space-x-2 pl-2">
                 <Image
                   height={10}
                   width={10}
@@ -47,7 +47,7 @@ export function Navbar() {
                 <span className="text-lg font-bold">Globus Beverages</span>
               </div>
 
-              <nav className="flex flex-col space-y-6">
+              <nav className="flex flex-col space-y-6 pl-4">
                 <div>
                   <h4 className="mb-3 text-sm font-semibold uppercase tracking-wider">
                     Products

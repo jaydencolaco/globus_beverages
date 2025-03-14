@@ -55,6 +55,7 @@ function SheetContent({
   return (
     <SheetPortal>
       <SheetOverlay />
+      <SheetPrimitive.Title>
       <SheetPrimitive.Content
         data-slot="sheet-content"
         className={cn(
@@ -77,6 +78,7 @@ function SheetContent({
           <span className="sr-only">Close</span>
         </SheetPrimitive.Close>
       </SheetPrimitive.Content>
+      </SheetPrimitive.Title>
     </SheetPortal>
   )
 }
