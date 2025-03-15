@@ -148,40 +148,40 @@ export default function Home() {
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
               {[
                 {
-                  title: "Specialty Coffee",
+                  title: "Lemon & Ginger Tea Premix",
                   description:
                     "Single-origin and artisanal blends from top coffee-producing regions.",
-                  image: "/lemontea.png",
+                  image: "/lemonteaglobusbeverages.png",
                 },
                 {
-                  title: "Premium Tea",
+                  title: "Peach Ice Tea",
                   description:
                     "Exquisite loose leaf teas including black, green, oolong, and white varieties.",
-                  image: "/swanesh.jpg",
+                  image: "/peachtea.png",
                 },
                 {
-                  title: "Herbal Infusions",
+                  title: "Nimbu Pani",
                   description:
                     "Caffeine-free blends crafted from herbs, fruits, and botanicals.",
-                  image: "/continental.jpg",
+                  image: "/nimbupani.png",
                 },
                 {
-                  title: "Organic Selection",
+                  title: "Aam Panna",
                   description:
                     "Certified organic products meeting the highest quality standards.",
-                  image: "/soceitytea.jpg",
+                  image: "/aampanna.png",
                 },
               ].map((product, index) => (
                 <div
                   key={index}
                   className="group overflow-hidden rounded-lg border bg-background shadow-sm transition-all hover:shadow-md"
                 >
-                  <div className="relative h-64 w-full overflow-hidden">
+                  <div className="relative h-64 w-full overflow-hidden flex items-center justify-center">
                     <Image
                       src={product.image || "/placeholder.svg"}
                       alt={product.title}
                       fill
-                      className="object-cover transition-transform duration-300 group-hover:scale-105"
+                      className="object-contain"
                     />
                   </div>
                   <div className="p-5">
@@ -353,16 +353,16 @@ export default function Home() {
         {/* CTA Section */}
         <section className="relative py-16 md:py-24">
           <div className="absolute inset-0 z-0">
-            <Image
+            {/* <Image
               src="/carousel.png"
               width={600}
               height={600}
               alt="Coffee beans background"
-              className="object-cover brightness-[0.4] w-full "
-            />
+              className=" h-[50vh] brightness-[0.4] w-full "
+            /> */}
           </div>
           <div className="container relative z-10 mx-auto px-4">
-            <div className="mx-auto max-w-3xl text-center text-white">
+            <div className="mx-auto max-w-3xl text-center text-black">
               <h2 className="mb-6 text-3xl font-bold md:text-4xl">
                 Ready to Elevate Your Tea & Coffee Business?
               </h2>
@@ -377,8 +377,7 @@ export default function Home() {
                 </Button>
                 <Button
                   size="lg"
-
-                  className="text-white font-medium backdrop-blur-sm hover:bg-white hover:text-black"
+                  className="text-white font-medium backdrop-blur-sm hover:bg-white hover:text-black hover:border-b-emerald-900 "
                 >
                   Download Catalog
                 </Button>
@@ -387,7 +386,7 @@ export default function Home() {
           </div>
         </section>
       </main>
-      <ContactUs/>
+      <ContactUs />
       <Footer />
     </div>
   );
