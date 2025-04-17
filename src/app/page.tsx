@@ -201,7 +201,95 @@ export default function Home() {
             </div>
           </div>
         </section>
-
+        <section className="py-16 md:py-24">
+          <div className="container mx-auto px-4">
+            <div className="grid gap-12 md:grid-cols-2 md:items-center">
+              <div>
+                <h2 className="mb-6 text-3xl font-bold">
+                  Event Services & Gallery
+                </h2>
+                <p className="mb-6 text-lg text-muted-foreground">
+                  We provide premium beverage services for events of all types
+                  and sizes. From elegant weddings to corporate exhibitions, our
+                  team delivers exceptional tea and coffee experiences.
+                </p>
+                <ul className="mb-8 space-y-4">
+                  <li className="flex items-start">
+                    <CheckCircle className="mr-2 h-5 w-5 shrink-0 text-primary" />
+                    <span>
+                      Tea and coffee machine rentals for events of any duration
+                    </span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="mr-2 h-5 w-5 shrink-0 text-primary" />
+                    <span>
+                      Premium beverage premixes for consistent quality
+                    </span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="mr-2 h-5 w-5 shrink-0 text-primary" />
+                    <span>
+                      Both premix and fresh milk coffee options available
+                    </span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="mr-2 h-5 w-5 shrink-0 text-primary" />
+                    <span>
+                      Professional service for weddings, seminars, and
+                      exhibitions
+                    </span>
+                  </li>
+                </ul>
+                <div className="flex flex-wrap gap-4">
+                  <Button asChild>
+                    <Link href="/services">View Our Services</Link>
+                  </Button>
+                  <Button variant="outline" asChild>
+                    <Link href="/gallery">Browse Event Gallery</Link>
+                  </Button>
+                </div>
+              </div>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="space-y-4">
+                  <div className="relative aspect-square overflow-hidden rounded-lg">
+                    <Image
+                      src="/placeholder.svg?height=300&width=300&text=Wedding"
+                      alt="Wedding coffee service"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="relative aspect-square overflow-hidden rounded-lg">
+                    <Image
+                      src="/placeholder.svg?height=300&width=300&text=Exhibition"
+                      alt="Exhibition coffee booth"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                </div>
+                <div className="relative -top-8 space-y-4">
+                  <div className="relative aspect-square overflow-hidden rounded-lg">
+                    <Image
+                      src="/placeholder.svg?height=300&width=300&text=Corporate"
+                      alt="Corporate event service"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="relative aspect-square overflow-hidden rounded-lg">
+                    <Image
+                      src="/placeholder.svg?height=300&width=300&text=Seminar"
+                      alt="Seminar coffee break"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
         {/* Services Section */}
         <section className="bg-muted/30 py-16 md:py-24">
           <div className="container mx-auto px-4">
@@ -281,7 +369,7 @@ export default function Home() {
             <div className="grid gap-8 md:grid-cols-2">
               <div className="relative h-[400px] overflow-hidden rounded-lg border shadow-sm">
                 <Image
-                  src="/soceitytea.jpg"
+                  src="/combination.png"
                   alt="World map showing our global operations"
                   fill
                   className="object-cover"
