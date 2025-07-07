@@ -150,8 +150,8 @@ export default function GalleryPage() {
           </div>
           <div className="container relative z-10 mx-auto px-4 py-24">
             <div className="max-w-2xl text-white">
-              <h1 className="mb-6 text-4xl font-bold leading-tight sm:text-5xl">Event Gallery</h1>
-              <p className="mb-8 text-lg md:text-xl">
+              <h1 className="mb-6 text-4xl font-bold leading-tight sm:text-5xl text-black">Event Gallery</h1>
+              <p className="mb-8 text-lg md:text-xl text-black">
                 Browse our portfolio of beverage services at various events, from elegant weddings to corporate
                 functions.
               </p>

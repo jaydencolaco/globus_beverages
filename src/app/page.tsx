@@ -29,7 +29,7 @@ export default function Home() {
                 Premium Tea & Coffee <br className="hidden sm:block" />
                 <span className="text-primary">From Source to Cup</span>
               </h1>
-              <p className="mb-6 text-base sm:mb-8 sm:text-lg md:text-xl">
+              <p className="mb-6 text-base sm:mb-8 text-black sm:text-lg md:text-xl">
                 Global sourcing, importing, exporting, and distribution of the finest tea and coffee products from
                 around the world.
               </p>
@@ -40,7 +40,7 @@ export default function Home() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="w-full bg-background/20 font-medium backdrop-blur-sm sm:w-auto"
+                  className="w-full bg-background/20 font-medium text-black backdrop-blur-sm sm:w-auto"
                 >
                   Contact Us
                 </Button>
@@ -386,10 +386,10 @@ export default function Home() {
           </div>
           <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-3xl text-center text-white">
-              <h2 className="mb-4 text-2xl font-bold sm:mb-6 sm:text-3xl md:text-4xl">
+              <h2 className="mb-4 text-2xl font-bold sm:mb-6 sm:text-3xl md:text-4xl text-black">
                 Ready to Elevate Your Tea & Coffee Experience?
               </h2>
-              <p className="mb-6 text-base sm:mb-8 sm:text-lg">
+              <p className="mb-6 text-base sm:mb-8 sm:text-lg text-black">
                 Whether you&apos;re looking to source premium products, rent equipment for an event, or need complete
                 beverage service, our team is here to help.
               </p>
@@ -400,7 +400,7 @@ export default function Home() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="w-full bg-background/10 font-medium backdrop-blur-sm sm:w-auto"
+                  className="w-full bg-background/10 font-medium backdrop-blur-sm sm:w-auto text-black"
                 >
                   Contact Us
                 </Button>

@@ -125,7 +125,7 @@ const products = [
   {
     id: 9,
     name: "Chamomile Herbal Blend",
-    category: "tea",
+    category: "herbal",
     subcategory: "herbal",
     price: 14.99,
     unit: "100g",
@@ -135,6 +135,48 @@ const products = [
     rating: 4.5,
     reviewCount: 73,
     tags: ["Organic", "Caffeine-free"],
+  },
+  {
+    id: 10,
+    name: "Peppermint Tea",
+    category: "herbal",
+    subcategory: "herbal",
+    price: 12.99,
+    unit: "100g",
+    origin: "Multiple",
+    description: "Refreshing peppermint leaves for a cooling and invigorating herbal tea experience.",
+    image: "/placeholder.svg?height=400&width=400",
+    rating: 4.4,
+    reviewCount: 56,
+    tags: ["Organic", "Caffeine-free"],
+  },
+  {
+    id: 11,
+    name: "Hot Chocolate Mix",
+    category: "others",
+    subcategory: "beverage",
+    price: 9.99,
+    unit: "500g",
+    origin: "Multiple",
+    description: "Rich and creamy hot chocolate mix perfect for cold days and special occasions.",
+    image: "/placeholder.svg?height=400&width=400",
+    rating: 4.6,
+    reviewCount: 89,
+    tags: ["Premium"],
+  },
+  {
+    id: 12,
+    name: "Matcha Latte Mix",
+    category: "others",
+    subcategory: "beverage",
+    price: 19.99,
+    unit: "200g",
+    origin: "Japan",
+    description: "Authentic Japanese matcha powder blended with premium ingredients for the perfect latte.",
+    image: "/placeholder.svg?height=400&width=400",
+    rating: 4.7,
+    reviewCount: 67,
+    tags: ["Organic", "Premium"],
   },
 ]
 
@@ -156,8 +198,8 @@ export default function ProductsPage() {
           </div>
           <div className="container relative z-10 mx-auto px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
             <div className="max-w-2xl text-white">
-              <h1 className="mb-4 text-3xl font-bold leading-tight sm:mb-6 sm:text-4xl lg:text-5xl">Our Products</h1>
-              <p className="mb-6 text-base sm:mb-8 sm:text-lg lg:text-xl">
+              <h1 className="mb-4 text-3xl font-bold leading-tight sm:mb-6 sm:text-4xl lg:text-5xl text-black">Our Products</h1>
+              <p className="mb-6 text-base sm:mb-8 sm:text-lg lg:text-xl text-black">
                 Explore our curated selection of premium teas and coffees sourced from the world&apos;s finest growing
                 regions.
               </p>
@@ -181,15 +223,36 @@ export default function ProductsPage() {
 
             <Tabs defaultValue="all" className="mb-8 sm:mb-12">
               <div className="mb-6 sm:mb-8">
-                <TabsList className="grid w-full grid-cols-3 sm:w-auto sm:grid-cols-none">
-                  <TabsTrigger value="all" className="text-xs sm:text-sm">
+                <TabsList className="inline-flex h-10 items-center justify-center rounded-md bg-muted p-1 text-muted-foreground">
+                  <TabsTrigger
+                    value="all"
+                    className="inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm"
+                  >
                     All Products
                   </TabsTrigger>
-                  <TabsTrigger value="coffee" className="text-xs sm:text-sm">
+                  <TabsTrigger
+                    value="coffee"
+                    className="inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm"
+                  >
                     Coffee
                   </TabsTrigger>
-                  <TabsTrigger value="tea" className="text-xs sm:text-sm">
+                  <TabsTrigger
+                    value="tea"
+                    className="inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm"
+                  >
                     Tea
+                  </TabsTrigger>
+                  <TabsTrigger
+                    value="herbal"
+                    className="inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm"
+                  >
+                    Herbal
+                  </TabsTrigger>
+                  <TabsTrigger
+                    value="others"
+                    className="inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm"
+                  >
+                    Others
                   </TabsTrigger>
                 </TabsList>
               </div>
@@ -208,6 +271,20 @@ export default function ProductsPage() {
               <TabsContent value="tea" className="grid gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
                 {products
                   .filter((product) => product.category === "tea")
+                  .map((product) => (
+                    <ProductCard key={product.id} product={product} />
+                  ))}
+              </TabsContent>
+              <TabsContent value="herbal" className="grid gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
+                {products
+                  .filter((product) => product.category === "herbal")
+                  .map((product) => (
+                    <ProductCard key={product.id} product={product} />
+                  ))}
+              </TabsContent>
+              <TabsContent value="others" className="grid gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
+                {products
+                  .filter((product) => product.category === "others")
                   .map((product) => (
                     <ProductCard key={product.id} product={product} />
                   ))}
