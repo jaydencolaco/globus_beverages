@@ -5,7 +5,7 @@ import { Mail, MapPin, Phone } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Navbar } from "@/components/Navbar"
 import { Footer } from "@/components/Footer"
-import { CustomerReviews } from "../../components/customer-reviews"
+import { CustomerReviews } from "@/components/customer-reviews"
 
 export default function AboutPage() {
   return (
@@ -43,11 +43,11 @@ export default function AboutPage() {
                 <div className="space-y-4 text-muted-foreground">
                   <p>
                     Founded in 1995, Globus Beverages began as a small specialty tea importer with a vision to bring the
-                    world's finest teas to discerning customers. What started as a passion project by our founder, James
+                    world&apos;s finest teas to discerning customers. What started as a passion project by our founder, James
                     Chen, quickly evolved into a respected name in the global beverage industry.
                   </p>
                   <p>
-                    Over the past three decades, we've expanded our operations to include coffee sourcing, global
+                    Over the past three decades, we&apos;ve expanded our operations to include coffee sourcing, global
                     distribution networks, and comprehensive import-export services. Today, we operate in over 30
                     countries, connecting premium producers with markets worldwide.
                   </p>
@@ -89,11 +89,11 @@ export default function AboutPage() {
                       After completing his education in International Business at Harvard University, James worked with
                       several major beverage companies before founding Globus Beverages in 1995. His deep understanding
                       of both Eastern and Western markets, combined with his passion for quality, has been instrumental
-                      in the company's success.
+                      in the company&apos;s success.
                     </p>
                     <p>
-                      "Our mission is to bridge cultures through exceptional tea and coffee experiences while ensuring
-                      sustainable practices that benefit everyone in the supply chain," says James. Under his
+                      &quot;Our mission is to bridge cultures through exceptional tea and coffee experiences while ensuring
+                      sustainable practices that benefit everyone in the supply chain,&quot; says James. Under his
                       leadership, Globus Beverages has pioneered several initiatives to improve traceability, fair trade
                       practices, and environmental sustainability in the industry.
                     </p>
@@ -129,7 +129,7 @@ export default function AboutPage() {
             <div className="mx-auto max-w-3xl text-center">
               <h2 className="mb-6 text-3xl font-bold">Our Mission & Values</h2>
               <p className="mb-12 text-lg text-muted-foreground">
-                At Globus Beverages, we're guided by a set of core principles that define who we are and how we operate.
+                At Globus Beverages, we&apos;re guided by a set of core principles that define who we are and how we operate.
               </p>
             </div>
             <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -180,7 +180,7 @@ export default function AboutPage() {
             <div className="mx-auto max-w-3xl text-center">
               <h2 className="mb-6 text-3xl font-bold">Our Global Presence</h2>
               <p className="mb-12 text-lg text-muted-foreground">
-                With offices and partners around the world, we're positioned to serve the global tea and coffee market
+                With offices and partners around the world, we&apos;re positioned to serve the global tea and coffee market
                 effectively.
               </p>
             </div>
@@ -250,7 +250,7 @@ export default function AboutPage() {
               <div className="mx-auto max-w-3xl text-center">
                 <h2 className="mb-6 text-3xl font-bold">Join Our Journey</h2>
                 <p className="mb-8 text-lg text-muted-foreground">
-                  Whether you're a producer looking for global markets, a distributor seeking premium products, or a
+                  Whether you&apos;re a producer looking for global markets, a distributor seeking premium products, or a
                   business interested in partnership opportunities, we'd love to connect with you.
                 </p>
                 <div className="flex flex-wrap justify-center gap-4">
@@ -268,4 +268,3 @@ export default function AboutPage() {
     </div>
   )
 }
-
