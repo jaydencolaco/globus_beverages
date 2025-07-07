@@ -1,8 +1,11 @@
 "use client"
 
+import type React from "react"
+
 import { useState } from "react"
 import Image from "next/image"
 import { X } from "lucide-react"
+import { toast } from "sonner"
 
 import { Button } from "@/components/ui/button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
@@ -122,6 +125,14 @@ export default function GalleryPage() {
     document.body.style.overflow = "auto"
   }
 
+  const handleRequestInfo = (event: React.MouseEvent, item: (typeof galleryItems)[0]) => {
+    event.stopPropagation()
+    toast.success("Request sent", {
+      description: `We'll send you more information about our services for ${item.title.toLowerCase()}.`,
+      duration: 5000,
+    })
+  }
+
   return (
     <div className="flex min-h-screen flex-col">
       <Navbar />
@@ -225,7 +236,7 @@ export default function GalleryPage() {
               <h2 className="mb-6 text-3xl font-bold">Interested in Our Services?</h2>
               <p className="mb-8 text-lg text-muted-foreground">
                 We provide comprehensive beverage solutions for events of all sizes. From equipment rental to
-                full-service setups, we've got you covered.
+                full-service setups, we&apos;ve got you covered.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Button size="lg" asChild>
@@ -270,7 +281,8 @@ export default function GalleryPage() {
             <div className="p-6">
               <h3 className="mb-2 text-xl font-bold">{selectedImage.title}</h3>
               <p className="mb-4 text-sm text-muted-foreground">{selectedImage.date}</p>
-              <p className="text-muted-foreground">{selectedImage.description}</p>
+              <p className="mb-6 text-muted-foreground">{selectedImage.description}</p>
+              <Button onClick={(e) => handleRequestInfo(e, selectedImage)}>Request Similar Service</Button>
             </div>
           </div>
         </div>
@@ -280,4 +292,3 @@ export default function GalleryPage() {
     </div>
   )
 }
-

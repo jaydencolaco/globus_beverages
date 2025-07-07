@@ -251,7 +251,7 @@ export default function AboutPage() {
                 <h2 className="mb-6 text-3xl font-bold">Join Our Journey</h2>
                 <p className="mb-8 text-lg text-muted-foreground">
                   Whether you&apos;re a producer looking for global markets, a distributor seeking premium products, or a
-                  business interested in partnership opportunities, we'd love to connect with you.
+                  business interested in partnership opportunities, we&apos;d love to connect with you.
                 </p>
                 <div className="flex flex-wrap justify-center gap-4">
                   <Button size="lg">Contact Us</Button>

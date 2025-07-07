@@ -107,7 +107,7 @@ export function CustomerReviews() {
                     />
                   ))}
                 </div>
-                <blockquote className="mb-6 text-muted-foreground">"{review.comment}"</blockquote>
+                <blockquote className="mb-6 text-muted-foreground">&quot;{review.comment}&quot;</blockquote>
                 <div className="flex items-center">
                   <div className="relative mr-4 h-12 w-12 overflow-hidden rounded-full">
                     <Image src={review.image || "/placeholder.svg"} alt={review.name} fill className="object-cover" />
@@ -149,4 +149,3 @@ export function CustomerReviews() {
     </section>
   )
 }
-

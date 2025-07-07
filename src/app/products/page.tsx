@@ -144,60 +144,68 @@ export default function ProductsPage() {
       <Navbar />
       <main className="flex-1">
         {/* Hero Section */}
-        {/* <section className="relative">
+        <section className="relative overflow-hidden">
           <div className="absolute inset-0 z-0">
             <Image
               src="/placeholder.svg?height=400&width=1920"
-              alt="Coffee and tea products"
+              alt="Product showcase"
               fill
               className="object-cover brightness-[0.7]"
               priority
             />
           </div>
-          <div className="container relative z-10 mx-auto px-4 py-16 md:py-24">
+          <div className="container relative z-10 mx-auto px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
             <div className="max-w-2xl text-white">
-              <h1 className="mb-6 text-4xl font-bold leading-tight sm:text-5xl">Our Products</h1>
-              <p className="mb-8 text-lg md:text-xl">
+              <h1 className="mb-4 text-3xl font-bold leading-tight sm:mb-6 sm:text-4xl lg:text-5xl">Our Products</h1>
+              <p className="mb-6 text-base sm:mb-8 sm:text-lg lg:text-xl">
                 Explore our curated selection of premium teas and coffees sourced from the world&apos;s finest growing
                 regions.
               </p>
             </div>
           </div>
-        </section> */}
+        </section>
 
         {/* Product Catalog Section */}
-        <section className="py-16">
-          <div className="container mx-auto px-4">
-            <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+        <section className="py-12 sm:py-16">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="mb-6 flex flex-col gap-4 sm:mb-8 sm:flex-row sm:items-center sm:justify-between">
               <div className="relative w-full max-w-md">
                 <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
                 <Input placeholder="Search products..." className="pl-10" />
               </div>
-              <Button variant="outline" className="flex items-center gap-2 sm:w-auto">
+              <Button variant="outline" className="flex items-center gap-2 sm:w-auto bg-transparent">
                 <Filter className="h-4 w-4" />
                 Filters
               </Button>
             </div>
 
-            <Tabs defaultValue="all" className="mb-12">
-              <TabsList className="mb-8">
-                <TabsTrigger value="all">All Products</TabsTrigger>
-                <TabsTrigger value="coffee">Coffee</TabsTrigger>
-                <TabsTrigger value="tea">Tea</TabsTrigger>
-              </TabsList>
-              <TabsContent value="all" className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <Tabs defaultValue="all" className="mb-8 sm:mb-12">
+              <div className="mb-6 sm:mb-8">
+                <TabsList className="grid w-full grid-cols-3 sm:w-auto sm:grid-cols-none">
+                  <TabsTrigger value="all" className="text-xs sm:text-sm">
+                    All Products
+                  </TabsTrigger>
+                  <TabsTrigger value="coffee" className="text-xs sm:text-sm">
+                    Coffee
+                  </TabsTrigger>
+                  <TabsTrigger value="tea" className="text-xs sm:text-sm">
+                    Tea
+                  </TabsTrigger>
+                </TabsList>
+              </div>
+              <TabsContent value="all" className="grid gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
                 {products.map((product) => (
                   <ProductCard key={product.id} product={product} />
                 ))}
               </TabsContent>
-              <TabsContent value="coffee" className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              <TabsContent value="coffee" className="grid gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
                 {products
                   .filter((product) => product.category === "coffee")
                   .map((product) => (
                     <ProductCard key={product.id} product={product} />
                   ))}
               </TabsContent>
-              <TabsContent value="tea" className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              <TabsContent value="tea" className="grid gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
                 {products
                   .filter((product) => product.category === "tea")
                   .map((product) => (
@@ -206,7 +214,7 @@ export default function ProductsPage() {
               </TabsContent>
             </Tabs>
 
-            <div className="mt-12 flex justify-center">
+            <div className="mt-8 flex justify-center sm:mt-12">
               <Button variant="outline" size="lg">
                 Load More Products
               </Button>
@@ -215,16 +223,16 @@ export default function ProductsPage() {
         </section>
 
         {/* Wholesale Section */}
-        <section className="bg-muted/30 py-16">
-          <div className="container mx-auto px-4">
-            <div className="grid gap-8 md:grid-cols-2 md:items-center">
+        <section className="bg-muted/30 py-12 sm:py-16">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid gap-8 lg:grid-cols-2 lg:items-center">
               <div>
-                <h2 className="mb-4 text-3xl font-bold">Wholesale Solutions</h2>
-                <p className="mb-6 text-lg text-muted-foreground">
+                <h2 className="mb-4 text-2xl font-bold sm:text-3xl">Wholesale Solutions</h2>
+                <p className="mb-4 text-base text-muted-foreground sm:mb-6 sm:text-lg">
                   Looking for larger quantities for your business? We offer competitive wholesale pricing, custom
                   packaging options, and flexible shipping arrangements.
                 </p>
-                <ul className="mb-8 space-y-3">
+                <ul className="mb-6 space-y-2 sm:mb-8 sm:space-y-3">
                   {[
                     "Bulk pricing for cafés, restaurants, and retailers",
                     "Custom blending and private labeling options",
@@ -232,15 +240,17 @@ export default function ProductsPage() {
                     "Dedicated account manager for your business",
                     "Training and marketing support available",
                   ].map((item, index) => (
-                    <li key={index} className="flex items-center">
+                    <li key={index} className="flex items-center text-sm sm:text-base">
                       <div className="mr-2 h-1.5 w-1.5 rounded-full bg-primary"></div>
                       {item}
                     </li>
                   ))}
                 </ul>
-                <Button size="lg">Request Wholesale Information</Button>
+                <Button size="lg" className="w-full sm:w-auto">
+                  Request Wholesale Information
+                </Button>
               </div>
-              <div className="relative h-[300px] overflow-hidden rounded-lg border shadow-sm md:h-[400px]">
+              <div className="relative h-64 overflow-hidden rounded-lg border shadow-sm sm:h-80 lg:h-96">
                 <Image
                   src="/placeholder.svg?height=800&width=800"
                   alt="Wholesale coffee packaging"
@@ -253,16 +263,18 @@ export default function ProductsPage() {
         </section>
 
         {/* Custom Orders Section */}
-        <section className="py-16">
-          <div className="container mx-auto px-4">
-            <div className="rounded-2xl bg-primary/10 p-8 md:p-12">
+        <section className="py-12 sm:py-16">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="rounded-2xl bg-primary/10 p-6 sm:p-8 md:p-12">
               <div className="mx-auto max-w-3xl text-center">
-                <h2 className="mb-6 text-3xl font-bold">Can&apos;t Find What You&apos;re Looking For?</h2>
-                <p className="mb-8 text-lg text-muted-foreground">
+                <h2 className="mb-4 text-2xl font-bold sm:mb-6 sm:text-3xl">Can&apos;t Find What You&apos;re Looking For?</h2>
+                <p className="mb-6 text-base text-muted-foreground sm:mb-8 sm:text-lg">
                   We specialize in sourcing specific varieties and creating custom blends for our clients. Contact our
                   team to discuss your requirements.
                 </p>
-                <Button size="lg">Contact Our Sourcing Team</Button>
+                <Button size="lg" className="w-full sm:w-auto">
+                  Contact Our Sourcing Team
+                </Button>
               </div>
             </div>
           </div>
@@ -272,4 +284,3 @@ export default function ProductsPage() {
     </div>
   )
 }
-
