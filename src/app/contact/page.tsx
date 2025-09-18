@@ -2,11 +2,12 @@
 "use client";
 
 import type React from "react";
+import { FaWhatsapp } from "react-icons/fa";
 
 import { useState } from "react";
-import Image from "next/image";
 import { Clock, Loader2, Mail, MapPin, Phone } from "lucide-react";
 import { toast } from "sonner";
+
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -23,7 +24,16 @@ import { Footer } from "@/components/Footer";
 import axios from "axios";
 import { PhoneNumberInput } from "@/components/PhoneNumberInput";
 import Head from "next/head";
-
+import {
+  Dialog,
+  DialogClose,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 export default function ContactPage() {
   const [isLoading, setIsLoading] = useState(false);
   const [lastname, setLastname] = useState("");
@@ -88,25 +98,7 @@ export default function ContactPage() {
       <Navbar />
       <main className="flex-1">
         {/* Hero Section */}
-        {/* <section className="relative overflow-hidden">
-          <div className="absolute inset-0 z-0">
-            <Image
-              src="/placeholder.svg?height=500&width=1920&text=Contact+Us"
-              alt="Contact us background"
-              fill
-              className="object-cover brightness-[0.7]"
-              priority
-            />
-          </div>
-          <div className="container relative z-10 mx-auto px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
-            <div className="max-w-2xl text-white">
-              <h1 className="mb-4 text-3xl font-bold leading-tight sm:mb-6 sm:text-4xl lg:text-5xl">Contact Us</h1>
-              <p className="mb-6 text-base sm:mb-8 sm:text-lg lg:text-xl">
-                Get in touch with our team for inquiries about our products, services, or partnership opportunities.
-              </p>
-            </div>
-          </div>
-        </section> */}
+
         <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-r from-slate-900 to-slate-800 dark:from-slate-950 dark:to-slate-900 text-white">
           <div className="container px-4 md:px-6 mx-auto">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
@@ -302,13 +294,17 @@ export default function ContactPage() {
                       <option value="" disabled>
                         Select a service
                       </option>
-                      <option value="banking">Banking Solutions</option>
-                      <option value="investments">Investment Management</option>
-                      <option value="advisory">Financial Advisory</option>
-                      <option value="retirement">Retirement Planning</option>
-                      <option value="insurance">Insurance Solutions</option>
-                      <option value="tax">Tax Planning</option>
-                      <option value="business">Business Solutions</option>
+                      <option value="rent-premix">
+                        Rent Tea & Coffee Premix
+                      </option>
+                      <option value="buy-machines">Buy Vending Machines</option>
+                      <option value="corporates">Corporate Solutions</option>
+                      <option value="events-stalls">
+                        Event & Stall Services
+                      </option>
+                      <option value="wholesale">Wholesale Orders</option>
+                      <option value="retail">Retail/Small Orders</option>
+                      <option value="service-amc">Service & AMC</option>
                       <option value="other">Other</option>
                     </select>
                   </div>
@@ -324,7 +320,7 @@ export default function ContactPage() {
                       name="message"
                       required
                       rows={6}
-                      placeholder="Tell us about your financial goals and how we can help"
+                      placeholder="Share your vending or premix needs, we’ll guide you"
                       className="min-h-[120px]"
                     />
                   </div>
@@ -378,19 +374,21 @@ export default function ContactPage() {
                     <div className="flex items-start space-x-3">
                       <MapPin className="mt-1 h-5 w-5 text-primary" />
                       <div>
-                        <p className="font-medium">123 Trading Avenue</p>
-                        <p className="text-sm text-muted-foreground">
-                          Global City, GC 10001
+                        <p className="font-medium">
+                          Globus Beverages, Shop No. 5
                         </p>
                         <p className="text-sm text-muted-foreground">
-                          United States
+                          UNIQUE PLAZA, B-WING, NAVDURGA CO-OP SOCIETY, BYCULLA,
+                        </p>
+                        <p className="text-sm text-muted-foreground">
+                          Mumbai - 400011
                         </p>
                       </div>
                     </div>
                     <div className="flex items-start space-x-3">
                       <Phone className="mt-1 h-5 w-5 text-primary" />
                       <div>
-                        <p className="font-medium">+1 (555) 123-4567</p>
+                        <p className="font-medium">+91 7304205800</p>
                         <p className="text-sm text-muted-foreground">
                           Main Office
                         </p>
@@ -399,7 +397,7 @@ export default function ContactPage() {
                     <div className="flex items-start space-x-3">
                       <Mail className="mt-1 h-5 w-5 text-primary" />
                       <div>
-                        <p className="font-medium">info@globusbeverages.com</p>
+                        <p className="font-medium">globusbeverages@gmail.com</p>
                         <p className="text-sm text-muted-foreground">
                           General Inquiries
                         </p>
@@ -436,22 +434,23 @@ export default function ContactPage() {
                     <p className="text-sm text-muted-foreground">
                       Our minimum order quantities vary by product. For retail
                       orders, there&apos;s no minimum. For wholesale orders,
-                      minimums typically start at 50kg for coffee and 25kg for
-                      tea.
+                      minimums typically start at 5kg for coffee and 10kg for
+                      tea. We do deliveries all over maharashtra only.
                     </p>
                   </CardContent>
                 </Card>
                 <Card>
                   <CardHeader>
                     <CardTitle className="text-lg">
-                      Do you offer custom blending services?
+                      What products and machines do you offer?
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-sm text-muted-foreground">
-                      Yes, we offer custom blending and private labeling
-                      services for businesses. Contact our team to discuss your
-                      specific requirements and minimum quantities.
+                      We offer a wide range of tea and coffee premixes, along
+                      with vending machines to suit every need. Our selection
+                      includes premix-based machines as well as fresh milk and
+                      coffee bean machines for authentic café-style beverages.
                     </p>
                   </CardContent>
                 </Card>
@@ -463,24 +462,26 @@ export default function ContactPage() {
                   </CardHeader>
                   <CardContent>
                     <p className="text-sm text-muted-foreground">
-                      We ship worldwide with established distribution networks
-                      in North America, Europe, Asia-Pacific, and the Middle
-                      East. Contact us for specific shipping information to your
-                      region.
+                      We ship mainly in Maharashtra provided you meet the
+                      minimum requirements of the material required. If you
+                      purchase in wholesale the rates can be negotiated. Do give
+                      us a call. For anything less than 7Kg please use the
+                      website
                     </p>
                   </CardContent>
                 </Card>
                 <Card>
                   <CardHeader>
                     <CardTitle className="text-lg">
-                      How long does equipment rental take to set up?
+                      How quickly can equipment be installed?
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-sm text-muted-foreground">
                       Equipment setup typically takes 1-2 hours depending on the
-                      complexity. For events, we recommend booking at least 2
-                      weeks in advance to ensure availability.
+                      machine and requirements. For events, book at least 4-5
+                      days in advance so we can confirm availability, prepare
+                      logistics, and ensure smooth installation.
                     </p>
                   </CardContent>
                 </Card>
@@ -501,16 +502,60 @@ export default function ContactPage() {
                 event, we&apos;re here to help you succeed.
               </p>
               <div className="flex flex-col gap-3 sm:flex-row sm:justify-center sm:gap-4">
-                <Button size="lg" className="w-full sm:w-auto">
-                  Request a Quote
-                </Button>
                 <Button
                   size="lg"
-                  variant="outline"
-                  className="w-full sm:w-auto bg-transparent"
+                  className="w-full sm:w-auto flex items-center gap-2 bg-black text-white hover:bg-green-600"
+                  asChild
                 >
-                  Schedule a Consultation
+                  <a
+                    href="https://wa.me/918080080789?text=Inquiry"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaWhatsapp className="w-5 h-5" />
+                    Text Us on WhatsApp
+                  </a>
                 </Button>
+                <Dialog>
+                  <form>
+                    <DialogTrigger asChild>
+                      <Button variant="outline">Open Dialog</Button>
+                    </DialogTrigger>
+                    <DialogContent className="sm:max-w-[425px]">
+                      <DialogHeader>
+                        <DialogTitle>Edit profile</DialogTitle>
+                        <DialogDescription>
+                          Make changes to your profile here. Click save when
+                          you&apos;re done.
+                        </DialogDescription>
+                      </DialogHeader>
+                      <div className="grid gap-4">
+                        <div className="grid gap-3">
+                          <Label htmlFor="name-1">Name</Label>
+                          <Input
+                            id="name-1"
+                            name="name"
+                            defaultValue="Pedro Duarte"
+                          />
+                        </div>
+                        <div className="grid gap-3">
+                          <Label htmlFor="username-1">Username</Label>
+                          <Input
+                            id="username-1"
+                            name="username"
+                            defaultValue="@peduarte"
+                          />
+                        </div>
+                      </div>
+                      <DialogFooter>
+                        <DialogClose asChild>
+                          <Button variant="outline">Cancel</Button>
+                        </DialogClose>
+                        <Button type="submit">Save changes</Button>
+                      </DialogFooter>
+                    </DialogContent>
+                  </form>
+                </Dialog>
               </div>
             </div>
           </div>

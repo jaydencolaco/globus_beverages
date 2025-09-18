@@ -4,13 +4,11 @@ import { ArrowRight, CheckCircle, Globe, Ship, TrendingUp, Truck } from "lucide-
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Navbar } from "@/components/Navbar"
 import { Footer } from "@/components/Footer"
 
 export default function Home() {
   return (
     <div className="flex min-h-screen flex-col">
-      <Navbar />
       <main className="flex-1">
         {/* Hero Section */}
         <section className="relative overflow-hidden">
