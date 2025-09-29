@@ -4,7 +4,6 @@ import { Filter, Search } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Navbar } from "@/components/Navbar"
 import { Footer } from "@/components/Footer"
 import { ProductCard } from "@/components/product-card"
 
@@ -183,7 +182,6 @@ const products = [
 export default function ProductsPage() {
   return (
     <div className="flex min-h-screen flex-col">
-      <Navbar />
       <main className="flex-1">
         {/* Hero Section */}
         <section className="relative overflow-hidden">

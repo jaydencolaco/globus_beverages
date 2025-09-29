@@ -3,14 +3,12 @@ import Link from "next/link"
 import { Mail, MapPin, Phone } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
-import { Navbar } from "@/components/Navbar"
 import { Footer } from "@/components/Footer"
 import { CustomerReviews } from "@/components/customer-reviews"
 
 export default function AboutPage() {
   return (
     <div className="flex min-h-screen flex-col">
-      <Navbar />
       <main className="flex-1">
         {/* Hero Section */}
         <section className="relative">

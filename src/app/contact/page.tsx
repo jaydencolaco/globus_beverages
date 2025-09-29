@@ -19,7 +19,6 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import axios from "axios";
 import { PhoneNumberInput } from "@/components/PhoneNumberInput";
@@ -95,7 +94,6 @@ export default function ContactPage() {
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <Navbar />
       <main className="flex-1">
         {/* Hero Section */}
 
@@ -116,9 +114,9 @@ export default function ContactPage() {
         </section>
 
         {/* Contact Information Cards */}
-        <section className="py-12 sm:py-16">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        {/* <section className="py-12 sm:py-16">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-4">
+            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
               <Card className="text-center">
                 <CardHeader className="pb-2">
                   <div className="mx-auto mb-2 flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
@@ -152,7 +150,7 @@ export default function ContactPage() {
                   <p className="text-sm text-muted-foreground">
                     Send us an email
                   </p>
-                  <p className="font-medium">
+                  <p className="font-medium text-sm">
                     <a
                       href="mailto: globusbeverages@gmail.com"
                       className="hover:underline"
@@ -177,8 +175,7 @@ export default function ContactPage() {
                   <p className="text-sm text-muted-foreground">
                     Visit our office
                   </p>
-                  {/* <p className="font-medium">UNIQUE PLAZA, B-WING</p> */}
-                  <p className="font-medium">
+                  <p className="font-medium text-sm">
                     <a
                       href="https://www.google.com/maps/place/Unique+Plaza+B,+Bapurao+Jagtap+Marg,+Municipal+Colony,+Byculla+West,+Agripada,+Mumbai,+Maharashtra+400011"
                       target="_blank"
@@ -214,7 +211,7 @@ export default function ContactPage() {
               </Card>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Contact Form and Map Section */}
         <section className="bg-muted/30 py-12 sm:py-16">
@@ -378,7 +375,7 @@ export default function ContactPage() {
                           Globus Beverages, Shop No. 5
                         </p>
                         <p className="text-sm text-muted-foreground">
-                          UNIQUE PLAZA, B-WING, NAVDURGA CO-OP SOCIETY, BYCULLA,
+                          Unique Plaza, B-Wing, Navdurga Co-op Soceity, Byculla 
                         </p>
                         <p className="text-sm text-muted-foreground">
                           Mumbai - 400011

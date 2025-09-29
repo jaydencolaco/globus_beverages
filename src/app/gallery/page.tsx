@@ -9,7 +9,6 @@ import { toast } from "sonner"
 
 import { Button } from "@/components/ui/button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Navbar } from "@/components/Navbar"
 import { Footer } from "@/components/Footer"
 
 // Sample gallery data
@@ -135,7 +134,6 @@ export default function GalleryPage() {
 
   return (
     <div className="flex min-h-screen flex-col">
-      <Navbar />
       <main className="flex-1">
         {/* Hero Section */}
         <section className="relative">
