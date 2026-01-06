@@ -20,22 +20,22 @@ export function Footer() {
             <ul className="space-y-2 text-sm sm:text-base">
               <li>
                 <Link href="/products" className="text-muted-foreground transition-colors hover:text-foreground">
-                  Specialty Coffee
+                  Tea and Coffee Premix
                 </Link>
               </li>
               <li>
                 <Link href="/products" className="text-muted-foreground transition-colors hover:text-foreground">
-                  Premium Tea
+                  Vending Machines
                 </Link>
               </li>
               <li>
                 <Link href="/products" className="text-muted-foreground transition-colors hover:text-foreground">
-                  Herbal Infusions
+                  Drink Premixes
                 </Link>
               </li>
               <li>
                 <Link href="/products" className="text-muted-foreground transition-colors hover:text-foreground">
-                  Organic Selection
+                  Ready to Make Sachets
                 </Link>
               </li>
             </ul>
@@ -55,7 +55,7 @@ export function Footer() {
               </li>
               <li>
                 <Link href="/services" className="text-muted-foreground transition-colors hover:text-foreground">
-                  Quality Control
+                  Events
                 </Link>
               </li>
               <li>
@@ -68,10 +68,10 @@ export function Footer() {
           <div>
             <h4 className="mb-3 text-sm font-semibold uppercase tracking-wider sm:mb-4">Contact</h4>
             <ul className="space-y-2 text-sm text-muted-foreground sm:text-base">
-              <li>123 Trading Avenue</li>
-              <li>Global City, GC 10001</li>
-              <li>info@globusbeverages.com</li>
-              <li>+1 (555) 123-4567</li>
+              <li>Unique Plaza, B-Wing,</li>
+              <li>Byculla, Mumbai 400011</li>
+              <li><a href="mailto: globusbeverages@gmail.com">globusbeverages@gmail.com</a></li>
+              <li> <a href="tel:+91 7304205800">+91 7304205800</a></li>
             </ul>
             <div className="mt-4 flex space-x-4">
               <Link href="#" className="text-muted-foreground transition-colors hover:text-foreground">
