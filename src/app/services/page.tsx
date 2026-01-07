@@ -1,12 +1,22 @@
+"use client"
+
 import Image from "next/image"
 import Link from "next/link"
 import { ArrowRight, Calendar, Coffee, Gift, ShoppingBag, Utensils } from "lucide-react"
+import { toast } from "sonner"
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Footer } from "@/components/Footer"
 
 export default function ServicesPage() {
+  const handleQuoteRequest = () => {
+    toast.success("Quote request received", {
+      description: "We'll get back to you shortly with a customized quote for your needs.",
+      duration: 5000,
+    })
+  }
+
   return (
     <div className="flex min-h-screen flex-col">
       <main className="flex-1">
@@ -23,12 +33,12 @@ export default function ServicesPage() {
           </div>
           <div className="container relative z-10 mx-auto px-4 py-24">
             <div className="max-w-2xl text-white">
-              <h1 className="mb-6 text-4xl font-bold leading-tight sm:text-5xl text-black">Our Services</h1>
-              <p className="mb-8 text-lg md:text-xl text-black">
+              <h1 className="mb-6 text-4xl font-bold leading-tight sm:text-5xl">Our Services</h1>
+              <p className="mb-8 text-lg md:text-xl">
                 Premium beverage solutions for businesses and events of all sizes.
               </p>
-              <Button size="lg" asChild>
-                <Link href="#contact">Request a Quote</Link>
+              <Button size="lg" onClick={handleQuoteRequest}>
+                Request a Quote
               </Button>
             </div>
           </div>
@@ -244,7 +254,7 @@ export default function ServicesPage() {
               ))}
             </div>
             <div className="mt-12 text-center">
-              <p className="mb-6 text-lg">See how we&apos;ve served at various events in our gallery:</p>
+              <p className="mb-6 text-lg">See how we've served at various events in our gallery:</p>
               <Button size="lg" asChild>
                 <Link href="/gallery">Visit Our Event Gallery</Link>
               </Button>
@@ -318,7 +328,7 @@ export default function ServicesPage() {
             <div className="mx-auto max-w-3xl text-center">
               <h2 className="mb-6 text-3xl font-bold md:text-4xl">See Us In Action</h2>
               <p className="mb-8 text-lg text-muted-foreground">
-                Browse our gallery to see how we&apos;ve served at various events, from elegant weddings to corporate
+                Browse our gallery to see how we've served at various events, from elegant weddings to corporate
                 exhibitions.
               </p>
             </div>
@@ -353,9 +363,11 @@ export default function ServicesPage() {
                   perfect solution for your needs.
                 </p>
                 <div className="flex flex-wrap justify-center gap-4">
-                  <Button size="lg">Request a Quote</Button>
-                  <Button size="lg" variant="outline">
-                    Contact Our Team
+                  <Button size="lg" onClick={handleQuoteRequest}>
+                    Request a Quote
+                  </Button>
+                  <Button size="lg" variant="outline" asChild>
+                    <Link href="/contact">Contact Our Team</Link>
                   </Button>
                 </div>
               </div>
@@ -367,4 +379,3 @@ export default function ServicesPage() {
     </div>
   )
 }
-

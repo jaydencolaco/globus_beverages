@@ -1,32 +1,58 @@
-// import type React from "react";
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import { ClerkProvider } from "@clerk/nextjs";
+import type React from "react"
+import { Playfair_Display, Inter } from "next/font/google"
+import { ClerkProvider } from "@clerk/nextjs"
+import "./globals.css"
 
-import "./globals.css";
-import { Navbar } from "@/components/Navbar";
+import { Navbar } from "@/components/Navbar"
+import { CartProvider } from "@/components/cart/cart-provider"
+import { ThemeProvider } from "@/components/theme-provider"
+import { SonnerProvider } from "@/components/sonner-provider"
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+})
 
-export const metadata: Metadata = {
-  title: "Globus Beverages",
+const playfairDisplay = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-playfair",
+  display: "swap",
+})
+
+export const metadata = {
+  title: "Globus Beverages - Premium Tea & Coffee Solutions",
   description:
-    "Premium tea and coffee import, export, and distribution services",
-};
+    "Premium beverage premixes and machines for events, offices, and businesses. Global sourcing and distribution excellence.",
+}
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: React.ReactNode
 }) {
   return (
     <ClerkProvider>
-      <html lang="en" suppressHydrationWarning>
+      <html
+        lang="en"
+        suppressHydrationWarning
+        className={`${playfairDisplay.variable} ${inter.variable}`}
+      >
         <body className={inter.className}>
-          <Navbar />
-          <main className="min-h-screen">{children}</main>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="light"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <CartProvider>
+              <Navbar />
+              {children}
+              <SonnerProvider />
+            </CartProvider>
+          </ThemeProvider>
         </body>
       </html>
     </ClerkProvider>
-  );
+  )
 }

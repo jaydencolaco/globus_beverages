@@ -5,25 +5,15 @@ import Image from "next/image"
 import Link from "next/link"
 import { Heart, ShoppingCart, Star } from "lucide-react"
 import { toast } from "sonner"
-
+import type { Product } from "@/lib/db"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 
-interface Product {
-  id: number
-  name: string
-  category: string
-  subcategory: string
-  price: number
-  unit: string
-  origin: string
-  description: string
-  image: string
-  rating: number
-  reviewCount: number
-  tags: string[]
+interface ProductCardProps {
+  product: Product
 }
+
 
 interface ProductCardProps {
   product: Product
@@ -84,7 +74,7 @@ export function ProductCard({ product }: ProductCardProps) {
             </CardDescription>
           </div>
           <div className="text-right">
-            <div className="text-base font-bold sm:text-lg">${product.price}</div>
+            <div className="text-base font-bold sm:text-lg">₹{product.price}</div>
             <div className="text-xs text-muted-foreground sm:text-sm">per {product.unit}</div>
           </div>
         </div>
