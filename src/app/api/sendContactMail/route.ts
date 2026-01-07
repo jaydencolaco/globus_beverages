@@ -3,12 +3,13 @@ import { NextRequest, NextResponse } from "next/server";
 
 export async function POST(request: any) {
   const emailPassword = process.env.EMAIL_PASSWORD;
+  const emailUser = process.env.EMAIL_USER;
   const transporter = createTransport({
     host: "smtp.gmail.com",
     port: 465,
     secure: true,
     auth: {
-      user: "jaydencolaco20@gmail.com",
+      user: emailUser,
       pass: emailPassword,
     },
   });
