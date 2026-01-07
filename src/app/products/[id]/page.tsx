@@ -293,7 +293,7 @@ export default function ProductPage() {
                         <label className="text-sm font-medium mb-2 block">Rating</label>
                         <Select
                           value={newReview.rating.toString()}
-                          onValueChange={(value) =>
+                          onValueChange={(value: string) =>
                             setNewReview((prev) => ({ ...prev, rating: Number.parseInt(value) }))
                           }
                         >
